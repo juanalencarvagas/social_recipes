@@ -1,0 +1,23 @@
+
+<h1>Receitas do site</h1>
+
+<dl>
+  <% @recipes.each do |r| %>
+    <dt>Nome da receita: </dt>
+      <dd><%= r.name %></dd>
+    <dt>Cozinha</dt>
+      <dd><%= r.cuisine %></dd>
+    <dt>Tipo de comida</dt>
+      <dd><%= r.food_type %></dd>
+    <dt>Quantas pessoas serve</dt>
+      <dd><%= r.dish_qtd %></dd>
+    <dt>Tempo de preparo (min)</dt>
+      <dd><%= r.prep_time %></dd>
+    <dt>Nível de dificuldade</dt>
+      <dd><%= r.difficult_level %></dd>
+    <dt>Ingredientes</dt>
+      <dd><%= r.ingredients %></dd>
+    <dt>Passo a passo</dt>
+      <dd><%= r.directions %></dd>
+  <% end %>
+</dl>

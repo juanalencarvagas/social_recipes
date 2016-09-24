@@ -1,8 +1,20 @@
-<%= @recipe.name %></br>
-<%= @recipe.cuisine %></br>
-<%= @recipe.food_type %></br>
-<%= @recipe.dish_qtd %></br>
-<%= "#{@recipe.prep_time} min." %></br>
-<%= @recipe.difficult_level %></br>
-<%= @recipe.ingredients %></br>
-<%= @recipe.directions %>
+<h1> Receita </h1>
+
+<dl>
+    <dt>Nome da receita: </dt>
+      <dd><%= @recipe.name %></dd>
+    <dt>Cozinha</dt>
+      <dd><%= @recipe.cuisine %></dd>
+    <dt>Tipo de comida</dt>
+      <dd><%= @recipe.food_type %></dd>
+    <dt>Quantas pessoas serve</dt>
+      <dd><%= @recipe.dish_qtd %></dd>
+    <dt>Tempo de preparo (min)</dt>
+      <dd><%= @recipe.prep_time %> min.</dd>
+    <dt>Nível de dificuldade</dt>
+      <dd><%= @recipe.difficult_level %></dd>
+    <dt>Ingredientes</dt>
+      <dd><%= @recipe.ingredients %></dd>
+    <dt>Passo a passo</dt>
+      <dd><%= @recipe.directions %></dd>
+</dl>

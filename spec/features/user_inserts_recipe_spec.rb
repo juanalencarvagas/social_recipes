@@ -13,7 +13,7 @@ feature 'User inserts recipes' do
     fill_in 'Passo a passo',         with: 'Instruções'
     click_on 'Cadastrar Receita'
 
-    expect(page).to have_content 'Macarronada'
+    expect(page).to have_content 'Nome da receita: Macarronada'
     expect(page).to have_content 'Cozinha Italiana'
     expect(page).to have_content 'Macarrão'
     expect(page).to have_content '2'
