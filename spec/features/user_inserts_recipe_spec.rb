@@ -1,18 +1,16 @@
 require 'rails_helper'
-
 feature 'User inserts recipes' do
   scenario 'Successfully' do
-
     visit new_recipe_path
 
-    fill_in 'Nome da receita'      , with: 'Macarronada'
-    fill_in 'Cozinha'              , with: 'Cozinha Italiana'
-    fill_in 'Tipo de comida'       , with: 'Macarrão'
+    fill_in 'Nome da receita',       with: 'Macarronada'
+    fill_in 'Cozinha',               with: 'Cozinha Italiana'
+    fill_in 'Tipo de comida',        with: 'Macarrão'
     fill_in 'Quantas pessoas serve', with: '2'
-    fill_in 'Tempo de preparo'     , with: '3.0'
-    fill_in 'Nível de dificuldade' , with: 'Fácil'
-    fill_in 'Ingredientes'         , with: 'Macarrão, Molho de tomate'
-    fill_in 'Passo a passo'        , with: 'Instruções'
+    fill_in 'Tempo de preparo',      with: '3.0'
+    fill_in 'Nível de dificuldade',  with: 'Fácil'
+    fill_in 'Ingredientes',          with: 'Macarrão, Molho de tomate'
+    fill_in 'Passo a passo',         with: 'Instruções'
     click_on 'Cadastrar Receita'
 
     expect(page).to have_content 'Macarronada'
@@ -26,18 +24,15 @@ feature 'User inserts recipes' do
   end
 
   scenario 'Unsuccessfully' do
-
     visit new_recipe_path
 
-    fill_in 'Nome da receita'      , with: ''
-    fill_in 'Cozinha'              , with: ''
-    fill_in 'Tipo de comida'       , with: ''
-    fill_in 'Ingredientes'         , with: ''
-    fill_in 'Passo a passo'        , with: ''
+    fill_in 'Nome da receita',       with: ''
+    fill_in 'Cozinha',               with: ''
+    fill_in 'Tipo de comida',        with: ''
+    fill_in 'Ingredientes',          with: ''
+    fill_in 'Passo a passo',         with: ''
     click_on 'Cadastrar Receita'
 
     expect(page).to have_content 'Preencha os campos obrigatórios'
   end
-
-
 end

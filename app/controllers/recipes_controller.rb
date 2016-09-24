@@ -1,5 +1,4 @@
 class RecipesController < ApplicationController
-
   def show
     @recipe = Recipe.find(params[:id])
   end
@@ -13,16 +12,16 @@ class RecipesController < ApplicationController
     if @recipe.save
       redirect_to @recipe
     else
-      flash[:alert] = "Preencha os campos obrigatórios"
+      flash[:alert] = 'Preencha os campos obrigatórios'
       render :new
     end
   end
 
   private
+
   def recipe_params
     params.require(:recipe).permit(:name, :cuisine, :food_type, :dish_qtd,
                                    :prep_time, :difficult_level, :ingredients,
                                    :directions)
   end
-
 end
