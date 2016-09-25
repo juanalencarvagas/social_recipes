@@ -4,9 +4,9 @@
     <dt>Nome da receita: </dt>
       <dd><%= @recipe.name %></dd>
     <dt>Cozinha</dt>
-      <dd><%= @recipe.cuisine %></dd>
+      <dd><%= @recipe.cuisine.kind %></dd>
     <dt>Tipo de comida</dt>
-      <dd><%= @recipe.food_type %></dd>
+      <dd><%= @recipe.food_type.name %></dd>
     <dt>Quantas pessoas serve</dt>
       <dd><%= @recipe.dish_qtd %></dd>
     <dt>Tempo de preparo (min)</dt>
