@@ -1,17 +1,17 @@
 require 'rails_helper'
 feature 'User inserts recipes' do
   scenario 'Successfully' do
-
     cuisine = create(:cuisine, kind: 'Italiana')
     foodtype = create(:food_type, name: 'Caseira')
+    recipe_difficulty = create(:recipe_difficulty, level: 'Fácil')
     visit new_recipe_path
 
     fill_in 'Nome da receita',       with: 'Macarronada'
     select 'Italiana',               from: 'Cozinha'
-    select 'Macarrão',               from: 'Tipo de comida'
+    select 'Caseira',               from: 'Tipo de comida'
     fill_in 'Quantas pessoas serve', with: '2'
     fill_in 'Tempo de preparo (min)',      with: '3.0'
-    fill_in 'Nível de dificuldade',  with: 'Fácil'
+    select 'Fácil',                 from: 'Nível de dificuldade'
     fill_in 'Ingredientes',          with: 'Macarrão, Molho de tomate'
     fill_in 'Passo a passo',         with: 'Instruções'
     click_on 'Cadastrar Receita'
@@ -30,7 +30,7 @@ feature 'User inserts recipes' do
     visit new_recipe_path
 
     fill_in 'Nome da receita',       with: ''
-    fill_in 'Tipo de comida',        with: ''
+    select '',               from: 'Tipo de comida'
     fill_in 'Ingredientes',          with: ''
     fill_in 'Passo a passo',         with: ''
     click_on 'Cadastrar Receita'

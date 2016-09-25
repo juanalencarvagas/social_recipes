@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :recipes, only: [:new, :create, :show, :index]
   resources :cuisines, only: [:new, :create,:show]
   resources :food_types, only: [:new, :create, :show]
+  resources :recipe_difficulties, only: [:new, :create, :show]
 
   root to: 'recipes#index'
 end

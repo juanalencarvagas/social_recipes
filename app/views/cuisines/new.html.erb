@@ -1,6 +1,6 @@
 <h1>Cozinhas</h1>
 <%= flash[:alert] %>
 <%= simple_form_for @cuisine do |f| %>
-  <%= f.input :kind, label: 'Tipo' %>
+  <%= f.input :kind, label: 'Tipo de comida' %>
   <%= f.submit 'Incluir cozinha' %>
 <% end %>

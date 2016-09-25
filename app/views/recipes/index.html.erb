@@ -6,15 +6,15 @@
     <dt>Nome da receita: </dt>
       <dd><%= r.name %></dd>
     <dt>Cozinha</dt>
-      <dd><%= r.cuisine %></dd>
+      <dd><%= r.cuisine_id %></dd>
     <dt>Tipo de comida</dt>
-      <dd><%= r.food_type.name %></dd>
+      <dd><%= r.food_type_id %></dd>
     <dt>Quantas pessoas serve</dt>
       <dd><%= r.dish_qtd %></dd>
     <dt>Tempo de preparo (min)</dt>
       <dd><%= r.prep_time %></dd>
     <dt>Nível de dificuldade</dt>
-      <dd><%= r.difficult_level %></dd>
+      <dd><%= r.recipe_difficulty.level %></dd>
     <dt>Ingredientes</dt>
       <dd><%= r.ingredients %></dd>
     <dt>Passo a passo</dt>

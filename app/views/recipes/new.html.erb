@@ -1,15 +1,15 @@
-<h1>Adicionar Receitas</h1>
+<h1>Adicionar Receita</h1>
 <%= flash[:alert] %>
 <%= simple_form_for @recipe do |f| %>
   <%= f.input :name, label: 'Nome da receita' %>
   <%= f.association :cuisine, label_method: :kind, label: 'Cozinha' %>
-
-  <%= f.input :food_type_id, collection: FoodType.all%>
+  <%= f.association :food_type, label_method: :name, label: 'Tipo de comida' %>
 
   <%= f.input :dish_qtd, label: 'Quantas pessoas serve' %>
   <%= f.input :prep_time, label: 'Tempo de preparo (min)' %>
-  <%= f.input :difficult_level, label: 'Nível de dificuldade',
-               collection: ['Fácil', 'Médio', 'Difícil'] %>
+
+  <%= f.association :recipe_difficulty, label_method: :level, label: 'Nível de dificuldade' %>
+
   <%= f.input :ingredients, label: 'Ingredientes' %>
   <%= f.input :directions, label: 'Passo a passo' %>
   <%= f.submit 'Cadastrar Receita' %>
