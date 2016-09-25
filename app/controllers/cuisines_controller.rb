@@ -9,11 +9,12 @@ class CuisinesController < ApplicationController
 
   def create
     @cuisine = Cuisine.new(cuisine_params)
-      if @cuisine.save
-         redirect_to @cuisine
-      else
-         render :new
-     end
+    if @cuisine.save
+      redirect_to @cuisine
+    else
+      flash[:alert] = 'Inclua o tipo da cozinha.'
+      render :new
+    end
   end
 
   private

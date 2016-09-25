@@ -1,0 +1,6 @@
+<h1>Tipo de Comida</h1>
+<%= flash[:alert] %>
+<%= simple_form_for @foodtype do |f| %>
+  <%= f.input :name, label: 'Nome do tipo' %>
+  <%= f.submit 'Incluir tipo' %>
+<% end %>
