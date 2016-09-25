@@ -6,9 +6,9 @@
     <dt>Nome da receita: </dt>
       <dd><%= r.name %></dd>
     <dt>Cozinha</dt>
-      <dd><%= r.cuisine_id %></dd>
+      <dd><%= r.cuisine.kind %></dd>
     <dt>Tipo de comida</dt>
-      <dd><%= r.food_type_id %></dd>
+      <dd><%= r.food_type.name %></dd>
     <dt>Quantas pessoas serve</dt>
       <dd><%= r.dish_qtd %></dd>
     <dt>Tempo de preparo (min)</dt>
