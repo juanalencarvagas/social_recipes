@@ -8,5 +8,6 @@ FactoryGirl.define do
     ingredients 'Macarrão, Molho de tomate'
     directions 'Instruções'
     cuisine
+    # picture 'macarronada.jpg'
   end
 end

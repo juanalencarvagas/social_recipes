@@ -1,8 +1,7 @@
 class RecipeDifficultiesController < ApplicationController
   def show
-    @recipe_difficulty =  RecipeDifficulty.find(params[:id])
+    @recipe_difficulty = RecipeDifficulty.find(params[:id])
   end
-
 
   def new
     @recipe_difficulty = RecipeDifficulty.new

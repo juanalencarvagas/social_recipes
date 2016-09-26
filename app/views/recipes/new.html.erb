@@ -4,13 +4,11 @@
   <%= f.input :name, label: 'Nome da receita' %>
   <%= f.association :cuisine, label_method: :kind, label: 'Cozinha' %>
   <%= f.association :food_type, label_method: :name, label: 'Tipo de comida' %>
-
   <%= f.input :dish_qtd, label: 'Quantas pessoas serve' %>
   <%= f.input :prep_time, label: 'Tempo de preparo (min)' %>
-
   <%= f.association :recipe_difficulty, label_method: :level, label: 'Nível de dificuldade' %>
-
   <%= f.input :ingredients, label: 'Ingredientes' %>
   <%= f.input :directions, label: 'Passo a passo' %>
+  <%= f.input :picture, as: :file, label: 'Imagem' %>
   <%= f.submit 'Cadastrar Receita' %>
 <% end %>

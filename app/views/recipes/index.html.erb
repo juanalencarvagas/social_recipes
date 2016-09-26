@@ -19,5 +19,9 @@
       <dd><%= r.ingredients %></dd>
     <dt>Passo a passo</dt>
       <dd><%= r.directions %></dd>
+      <%#= if @recipes.picture.file? %>
+        <dt>Imagem</dt>
+        <dd><%= image_tag r.picture.url %></dd>
+      <%# end %>
   <% end %>
 </dl>
