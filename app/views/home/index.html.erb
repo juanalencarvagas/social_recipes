@@ -1,5 +1,11 @@
 
-<h1>Receitas</h1>
+<h1>Receitas do site</h1>
+
+<h2>Cozinhas</h2>
+
+<% @recipes.each do |c| %>
+  <%= c %>
+<% end %>
 
 <dl>
   <% @recipes.each do |r| %>

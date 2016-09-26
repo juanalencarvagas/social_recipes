@@ -1,7 +1,4 @@
 class RecipesController < ApplicationController
-  def index
-    @recipes = Recipe.all.order(created_at: :desc).take(20)
-  end
 
   def show
     @recipe = Recipe.find(params[:id])

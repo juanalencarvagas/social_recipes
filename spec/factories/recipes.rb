@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :recipe do
+    
     sequence(:name, 1) { |n| "Macarronada#{n}" }
     food_type
     dish_qtd 2
