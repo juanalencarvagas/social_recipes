@@ -1,33 +1,64 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1>Receitas do site</h1>
+  </div>
+    <div class="col-md-6">
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Início</a></li>
+        <li><a href="#">Minhas receitas</a></li>
+        <li><a href="#">Cadastrar receita</a></li>
+        <li><a href="#">Sair</a></li>
+      </ul>
+    </div>
+  </div>
 
-<h1>Receitas do site</h1>
+<div class="row">
+  <div class="col-md-4">
 
-<h2>Cozinhas</h2>
+    <h2>Cozinhas</h2>
+    <div id='cozinhas'>
+      <% @cuisines.each do |c| %>
+        <%= link_to c.kind, c  %>
+      <% end %>
+    </div>
 
-<% @recipes.each do |c| %>
-  <%= c %>
-<% end %>
+    <h2>Tipos</h2>
+    <div id='food_type'>
+      <% @food_type.each do |f| %>
+        <%= link_to f.name, f  %>
+      <% end %>
+    </div>
 
-<dl>
-  <% @recipes.each do |r| %>
-    <dt>Nome da receita: </dt>
-      <dd><%= r.name %></dd>
-    <dt>Cozinha</dt>
-      <dd><%= r.cuisine.kind %></dd>
-    <dt>Tipo de comida</dt>
-      <dd><%= r.food_type.name %></dd>
-    <dt>Quantas pessoas serve</dt>
-      <dd><%= r.dish_qtd %></dd>
-    <dt>Tempo de preparo (min)</dt>
-      <dd><%= r.prep_time %></dd>
-    <dt>Nível de dificuldade</dt>
-      <dd><%= r.recipe_difficulty.level %></dd>
-    <dt>Ingredientes</dt>
-      <dd><%= r.ingredients %></dd>
-    <dt>Passo a passo</dt>
-      <dd><%= r.directions %></dd>
-      <%#= if @recipes.picture.file? %>
-        <dt>Imagem</dt>
-        <dd><%= image_tag r.picture.url %></dd>
-      <%# end %>
-  <% end %>
-</dl>
+  </div>
+  <div class="col-md-4">
+     <h2>Últimas Receitas</h2>
+    <dl>
+      <% @recipes_top_20.each do |r| %>
+          <dd><%= r.name %></dd>
+        <dt>Cozinha</dt>
+          <dd><%= r.cuisine.kind %></dd>
+            <dt>Nível de dificuldade</dt>
+          <dd><%= r.recipe_difficulty.level %></dd>
+                <dt>Imagem</dt>
+            <dd><%= image_tag r.picture.url %></dd>
+          <%# end %>
+      <% end %>
+    </dl>
+
+  </div>
+  <div class="col-md-4">
+    <h2>Receitas Favoritadas</h2>
+    <dl>
+      <% @recipes_top_20.each do |r| %>
+          <dd><%= r.name %></dd>
+        <dt>Cozinha</dt>
+          <dd><%= r.cuisine.kind %></dd>
+            <dt>Nível de dificuldade</dt>
+          <dd><%= r.recipe_difficulty.level %></dd>
+                <dt>Imagem</dt>
+            <dd><%= image_tag r.picture.url %></dd>
+          <%# end %>
+      <% end %>
+    </dl>
+  </div>
+</div>

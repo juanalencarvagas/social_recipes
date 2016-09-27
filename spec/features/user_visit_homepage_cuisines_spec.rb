@@ -2,7 +2,7 @@ require 'rails_helper'
 feature 'User visit home page and sees cuisines' do
   scenario 'Successfully' do
     create(:recipe, name: 'Macarronada')
-    create(:cuisine)
+    create(:cuisine, kind: 'Italiana')
 
     visit root_path
 
