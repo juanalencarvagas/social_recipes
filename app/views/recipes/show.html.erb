@@ -18,5 +18,5 @@
     <dt>Passo a passo</dt>
       <dd><%= @recipe.directions %></dd>
     <dt>Imagem</dt>
-      <dd><%= image_tag @recipe.picture.url %></dd>
+      <dd><%= image_tag @recipe.picture.url(:medium) %></dd>
 </dl>

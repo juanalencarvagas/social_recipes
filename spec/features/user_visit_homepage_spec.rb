@@ -4,6 +4,6 @@ feature 'User visit home page and sees recipe' do
     create(:recipe, name: 'Macarronada')
     visit root_path
 
-    expect(page).to have_content 'Nome da receita: Macarronada'
+    expect(page).to have_content 'Macarronada'
   end
 end
